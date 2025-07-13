@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mortgage Repayment Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="index.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="card">
+            <div class="calculator">
+                <div class="header">
+                    <h1>Mortgage Calculator</h1>
+                    <button class="clear">Clear All</button>
+                </div>
+                <div class="Amount">
+                    <label for="mortgage-amount">Mortgage Amount</label>
+                    <div class="amount-input">
+                        <span class="unit">£</span>
+                        <input type="number" id="mortgage-amount">
+                    </div>
+                    <span class="error E-amount">this field is required</span>
+                </div>
+                <div class="Term-Rate">
+                    <div class="mortgage-term">
+                        <label for="mortgage-term">Mortgage Term</label>
+                        <div class="term-input">
+                            <input type="number" id="mortgage-term">
+                            <span class="unit-year">years</span>
+                        </div>
+                        <span class="error E-term">this field is required</span>
+                    </div>
+                    <div class="interest-rate">
+                        <label for="interest-rate">Interest Rate</label>
+                        <div class="term-input">
+                            <input type="number" id="interest-rate">
+                            <span class="unit-percent">%</span>
+                        </div>
+                        <span class="error E-rate">this field is required</span>
+                    </div>
+                </div>
+                <div class="mortgage-type">
+                    <label for="mortgage-type" class="mortgage-type-label">Mortgage Type</label>
+                    <div id="mortgage-type">
+                        <div class="repayment type">
+                            <input type="radio" value="repayment" name="type" id="repayment" class="type-input">
+                            <label class="type-label" for="repayment">Repayment</label>
+                        </div>
+                        <div class="interest-only type">
+                            <input class="type-input" type="radio" value="interest-only" name="type" id="interest-only" class="type-input">
+                            <label class="type-label" for="interest-only">interest-only</label>
+                        </div>
+                    </div>
+                    <span class="error E-type">this field is required</span>
+                </div>
+                <button class="calculate">
+                    <img src="assets/images/icon-calculator.svg" alt="icon-calculator" class="icon-calculator">
+                    Calculate Repayments
+                </button>
+            </div>
+            <div class="results">
+                <div class="Empty-results">
+                    <img src="/assets/images/illustration-empty.svg" alt="illustration-empty" class="illustration-empty">
+                    <h1>Results shown here</h1>
+                    <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p> 
+                </div>
+                <div class="Completed-results">
+                    <h1>Your results</h1>
+                    <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+                    <div class="results-details">
+                        <div class="monthly-repayments">
+                            <span class="label">Your monthly repayments</span>
+                            <span class="value">£0.00</span>
+                        </div>
+                        <hr>
+                        <div class="total-repayable">
+                            <span class="label-total">Total you'll repay over the term</span>
+                            <span class="value-total">£0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
